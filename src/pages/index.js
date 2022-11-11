@@ -9,16 +9,18 @@ const Index = () => {
 			<div className={style.hero}>
 				<Image src="/images/index-hero.jpg" alt="hero" layout='fill' objectFit='cover' quality={90} />
 				<div className={style.textContainer}>
-					<h1>I'm Yoshiki Kato!</h1>
+					<h1>I&apos;m Yoshiki Kato!</h1>
 					<h3>JavaScript Developer</h3>
 				</div>
 			</div>
 			<div className={style.container}>
 				<div className={style.profile}>
-					<h2>JavaScript Nerd</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus est tellus, eget porta leo tristique a. Donec hendrerit massa leo, id tempus dolor vulputate et. Pellentesque consectetur dolor placerat euismod pellentesque. Integer scelerisque, augue ac ullamcorper sodales, neque lectus tristique turpis, id luctus lectus lorem eu tortor. In imperdiet semper accumsan. Etiam pellentesque libero et scelerisque vehicula. Nam quis justo mi. Cras erat ex, rhoncus id blandit id, commodo ac leo. In hac habitasse platea dictumst. Pellentesque id sapien quis justo dapibus ornare. Proin scelerisque quam quis sapien porttitor vehicula. Fusce a vehicula sem, at rhoncus augue. Mauris eros massa, tincidunt et lobortis sed, tempor vitae ligula.</p>
+					<div>
+						<h2>JavaScript Nerd</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus est tellus, eget porta leo tristique a. Donec hendrerit massa leo, id tempus dolor vulputate et. Pellentesque consectetur dolor placerat euismod pellentesque. Integer scelerisque, augue ac ullamcorper sodales, neque lectus tristique turpis, id luctus lectus lorem eu tortor. In imperdiet semper accumsan. Etiam pellentesque libero et scelerisque vehicula. Nam quis justo mi. Cras erat ex, rhoncus id blandit id, commodo ac leo. In hac habitasse platea dictumst. Pellentesque id sapien quis justo dapibus ornare. Proin scelerisque quam quis sapien porttitor vehicula. Fusce a vehicula sem, at rhoncus augue. Mauris eros massa, tincidunt et lobortis sed, tempor vitae ligula.</p>
+					</div>
 				</div>
-				<Image src="/images/profile.jpg" alt="hero" layout="fill" objectFit='cover' quality={90} />
+				<Image src="/images/profile.jpg" alt="hero" height={1195} width={1000} quality={90} />
 			</div>
 			<div className={style.skills}>
 				<h2>Skills</h2>
