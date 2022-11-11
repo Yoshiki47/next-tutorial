@@ -2,11 +2,13 @@ import Link from 'next/link'
 import Image from 'next/image';
 import matter from 'gray-matter';
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 import * as style from '../styles/blog.module.scss'
 
 const Blog = ({ blogs }) => {	
 	return (
 		<Layout>
+			<SEO title="ブログ" description="これはブログページです" />
 			<div className={style.wrapper}>
 				<div className={style.container}>
 					<h1>Blog</h1>

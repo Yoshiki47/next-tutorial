@@ -1,11 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 import * as style from '../styles/index.module.scss'
 
 const Index = () => {
 	return (
 		<Layout>
+			<SEO title="Yoshiki Kato" description="Yoshiki Katoのポートフォリオサイトです" />
 			<div className={style.hero}>
 				<Image src="/images/index-hero.jpg" alt="hero" layout='fill' objectFit='cover' quality={90} />
 				<div className={style.textContainer}>
