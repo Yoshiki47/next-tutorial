@@ -4,7 +4,8 @@ import ReactMarkdown from "react-markdown";
 import Layout from "../../components/layout";
 import * as style from '../../styles/singleBlog.module.scss'
 
-const SingleBlog = (props) => {    
+const SingleBlog = ({ frontmatter, markdownBody }) => {    
+    const { title, date, image } = frontmatter
     return (
         <Layout>
             <div className={style.hero}>
@@ -12,9 +13,9 @@ const SingleBlog = (props) => {
             </div>
             <div className={style.wrapper}>
                 <div className={style.container}>
-                    <h1>{props.frontmatter.title}</h1>
-                    <p>{props.frontmatter.date}</p>
-                    <ReactMarkdown>{props.markdownBody}</ReactMarkdown>
+                    <h1>{title}</h1>
+                    <p>{date}</p>
+                    <ReactMarkdown>{markdownBody}</ReactMarkdown>
                 </div>
             </div>
         </Layout>

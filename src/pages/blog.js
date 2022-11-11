@@ -4,20 +4,21 @@ import matter from 'gray-matter';
 import Layout from '../components/layout';
 import * as style from '../styles/blog.module.scss'
 
-const Blog = (props) => {	
+const Blog = ({ blogs }) => {	
 	return (
 		<Layout>
 			<div className={style.wrapper}>
 				<div className={style.container}>
 					<h1>Blog</h1>
 					<p>エンジニアの日常生活をお届けします</p>
-					{props.blogs.map((blog, index) => {
+					{blogs.map((blog, index) => {
+						const { title, date, excerpt, image } = blog.frontmatter
 						return(
 							<div key={index} className={style.blogCard}>
 								<div className={style.textContainer}>
-									<h3>{blog.frontmatter.title}</h3>
-									<p>{blog.frontmatter.excerpt}</p>
-									<p>{blog.frontmatter.date}</p>
+									<h3>{title}</h3>
+									<p>{excerpt}</p>
+									<p>{date}</p>
 									<Link href={`/blog/${blog.slug}`}><a>Read More</a></Link>
 								</div>
 								<div className={style.cardImg}>
