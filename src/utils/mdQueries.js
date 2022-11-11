@@ -1,5 +1,7 @@
 import matter from "gray-matter";
 
+export const blogsPerPage = 5
+
 export async function getAllBlogs() {
     const blogs = ((context) => {
         const keys = context.keys()
@@ -18,8 +20,10 @@ export async function getAllBlogs() {
     const orderedBlogs = blogs.sort((a, b) => {
         return b.frontmatter.id - a.frontmatter.id
     })
+    const numberPages = Math.ceil(orderedBlogs.length / blogsPerPage)
     return {
-        orderedBlogs: JSON.parse(JSON.stringify(orderedBlogs))
+        orderedBlogs: JSON.parse(JSON.stringify(orderedBlogs)),
+        numberPages: numberPages,
     }
 }
 
