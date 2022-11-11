@@ -12,7 +12,7 @@ const Footer = () => {
                 <hr />
                 <Link href="/blog"><a>Blog</a></Link>
                 <Link href="/contact"><a>Contact</a></Link>
-                <p>©{new Date().getFullYear()} Yoshiki Kato</p>
+                <p>&copy;{new Date().getFullYear()} Yoshiki Kato</p>
             </div>
         </footer>
     )
